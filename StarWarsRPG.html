@@ -23,7 +23,11 @@
 
 <div class="container">
 
-	<div class="row">
+	<h1 class="hide-and-show-title">
+				Fighter Chosen.
+	</h1>
+
+	<div class="row character-choice-panel">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3>
@@ -32,24 +36,28 @@
 			</div>
 			<div class="panel-body">
 				<div class="character-list">
-					<div id="character-1">
-						<h1>Darth Vader</h1>
+					<div id="choose-vader">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,w_262/v1480656870/Screenshot_2016-12-02_00.30.33_ypcqjg.png">
+						<!-- <h1>Darth Vader</h1> -->
 					</div>
 				</div>
 				<div class="character-list">
-					<div id="character-2">
-						<h1>Rey</h1>
+					<div id="choose-rey">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,w_262/v1480656870/Screenshot_2016-12-02_00.29.52_djosh9.png">
+						<!-- <h1>Rey</h1> -->
 					</div>
 				</div>
 				<div class="character-list">
-					<div id="character-3">
-						<h1>Anakin Skywalker</h1>
+					<div id="choose-chewie">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/v1480656870/Screenshot_2016-12-02_00.31.35_g4rcmx.png">
+						<!-- <h1>Chewbacca</h1> -->
 					</div>
 					
 				</div>
 				<div class="character-list">
-					<div id="character-4">
-						<h1>Captain Phasma</h1>
+					<div id="choose-phasma">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_crop,h_365,w_262/v1480656870/Screenshot_2016-12-02_00.30.13_na24s9.png">
+						<!-- <h1>Captain Phasma</h1> -->
 					</div>
 					
 				</div>
@@ -80,11 +88,17 @@
                     <h3 class="panel-title">Now Fighting</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-lg-6">
-                			<h3>Fighter 1 goes here.</h3>
+                    	<div class="col-lg-5">
+                			<h3>Your fighter here.</h3>
+                			<p class="hp">HP=<span id="fighter-hp"></span></p>
                 		</div>
-                		<div class="col-lg-6">
-                			<h3>Fighter 2 goes here.</h3>
+                		<div class="col-lg-2">
+                			<h3>-vs-</h3>
+                			<button class="btn" id="attack">Attack!</button>
+                		</div>
+                		<div class="col-lg-5">
+                			<h3>Defender goes here.</h3>
+                			<p class="hp">HP=<span id="defender-hp"></span></p>
                 		</div>
                 </div>
             </div>    
