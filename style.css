@@ -1,0 +1,56 @@
+body {
+	background-color: #D8D8D1;
+	
+}
+
+.jumbotron {
+	background-color: #3F3F3E;
+	color: yellow;
+	border: 8px solid white;
+	border-radius: 4px;
+	margin-bottom: 0px;
+}
+
+.container {
+	background-color: #3F3F3E;
+	/*color: yellow;*/
+	border: 8px solid white;
+	border-top: 0px;
+	/*border-top: 0px;*/
+	/*border-radius: 4px;*/
+	/*padding: 0px 0px 0px 0px;*/
+	/*margin: auto;*/
+	width: 100%;
+}
+
+.row {
+	 margin-right: 0px; 
+     margin-left: 0px; 
+}
+
+.panel {
+	margin-top: 20px;
+	background-color: #3F3F3E;
+	color: yellow;
+}
+
+.panel-heading h3 {
+	color: #3F3F3E;
+	text-align: center;
+}
+
+.panel-body {
+	text-align: center;
+}
+
+.character-list {
+	padding: 0px 20px 0px 20px;
+	margin: 0px 10px 0px 10px;
+	display: inline-block;
+	border: 3px solid yellow;
+
+}
+
+.character-list h1 {
+	text-align: center;
+}
