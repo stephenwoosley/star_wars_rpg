@@ -23,8 +23,8 @@
 
 <div class="container">
 
-	<h1 class="hide-and-show-title">
-				Fighter Chosen.
+	<h1 id="instructions">
+	Test Instructions
 	</h1>
 
 	<div class="row character-choice-panel">
@@ -33,37 +33,37 @@
 				<h3>
 					Choose your Character, young padawan.
 				</h3>
+				<h1 class="Result">
+					
+				</h1>
 			</div>
 			<div class="panel-body">
 				<div class="character-list">
 					<div id="choose-vader">
 						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,w_262/v1480656870/Screenshot_2016-12-02_00.30.33_ypcqjg.png">
-						<!-- <h1>Darth Vader</h1> -->
 					</div>
 				</div>
 				<div class="character-list">
 					<div id="choose-rey">
 						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,w_262/v1480656870/Screenshot_2016-12-02_00.29.52_djosh9.png">
-						<!-- <h1>Rey</h1> -->
 					</div>
 				</div>
 				<div class="character-list">
 					<div id="choose-chewie">
 						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/v1480656870/Screenshot_2016-12-02_00.31.35_g4rcmx.png">
-						<!-- <h1>Chewbacca</h1> -->
 					</div>
 					
 				</div>
 				<div class="character-list">
 					<div id="choose-phasma">
 						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_crop,h_365,w_262/v1480656870/Screenshot_2016-12-02_00.30.13_na24s9.png">
-						<!-- <h1>Captain Phasma</h1> -->
 					</div>
 					
 				</div>
 			</div>
 		</div>
 	</div>
+
 
     <div class="row">
 
@@ -75,14 +75,15 @@
                 </div>
 
                 <div class="panel-body">
-                    <h3>Fighter goes here.</h3>
+                    <h3 id="fighter-name">Fighter goes here.</h3>
+                    <div id="chosen-fighter"></div>
                 </div>
 
             </div>
         </div>
 
         <!-- Result Panel -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 arena">
         <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Now Fighting</h3>
@@ -97,21 +98,28 @@
                 			<button class="btn" id="attack">Attack!</button>
                 		</div>
                 		<div class="col-lg-5">
-                			<h3>Defender goes here.</h3>
-                			<p class="hp">HP=<span id="defender-hp"></span></p>
+                			<h3>Opponent goes here.</h3>
+                			<div id="opponent"></div>
+                			<p class="hp">HP=<span id="opponent-hp"></span></p>
                 		</div>
                 </div>
             </div>    
         </div>
 
-        <div class="col-lg-3">
+        <div class="col-lg-3" id="enemy-div">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Your Enemies</h3>
                 </div>
 
                 <div class="panel-body">
-                	<h3>Enemies go here.</h3>
+                	<div id="enemy-area">
+                		<div class="row">
+                			<div id="opponentDivOne" class="col-lg-4"></div>
+                			<div id="opponentDivTwo" class="col-lg-4"></div>
+                			<div id="opponentDivThree" class="col-lg-4"></div>
+                		</div>
+                	</div>
                 </div>
 
             </div>
