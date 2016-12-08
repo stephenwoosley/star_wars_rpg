@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>StarWarsRPG</title>
+    <title>StarWarsBattle</title>
 
     <!-- Added link to the jQuery Library -->
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
@@ -11,14 +11,18 @@
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 </head>
 <body>
 
 <!-- Jumbotron for Title -->
 <div class="jumbotron">
-    <h1 class="text-center">Star Wars: Head2Head</h1>
-    <h3 class="text-center">Like Galaxy of Heroes, but in the browser and with only one character on your team.</h3>
+    <div id="logo">
+        <img src="assets/sw-stacked.png">
+    </div>
+    <!-- <h1 class="text-center">Star Wars: Head2Head</h1>
+    <h3 class="text-center">Like Galaxy of Heroes, but in the browser and with only one character on your team.</h3> -->
 </div>
 
 <div class="container">
@@ -40,23 +44,27 @@
 			<div class="panel-body">
 				<div class="character-list">
 					<div id="choose-vader">
-						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,w_262/v1480656870/Screenshot_2016-12-02_00.30.33_ypcqjg.png">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,h_300,w_210/v1481089174/kylo_jtbdjj.jpg">
+                        <p class="hp">HP=<span id="vader-hp">150</span></p>
 					</div>
 				</div>
 				<div class="character-list">
 					<div id="choose-rey">
-						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,w_262/v1480656870/Screenshot_2016-12-02_00.29.52_djosh9.png">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,h_300,w_210/v1481089174/rey_ukakmx.jpg">
+                        <p class="hp">HP=<span id="rey-hp">135</span></p>
 					</div>
 				</div>
 				<div class="character-list">
 					<div id="choose-chewie">
-						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/v1480656870/Screenshot_2016-12-02_00.31.35_g4rcmx.png">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_scale,h_300,w_210/v1481089174/chewie_blcwit.jpg">
+                        <p class="hp">HP=<span id="chewie-hp">180</span></p>
 					</div>
 					
 				</div>
 				<div class="character-list">
 					<div id="choose-phasma">
-						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/c_crop,h_365,w_262/v1480656870/Screenshot_2016-12-02_00.30.13_na24s9.png">
+						<img src="http://res.cloudinary.com/stephenrwoosley/image/upload/v1481089174/phasma_ckblle.jpg">
+                        <p class="hp">HP=<span id="phasma-hp">100</span></p>
 					</div>
 					
 				</div>
@@ -66,16 +74,14 @@
 
 
     <div class="row">
-
-        <!-- Calculator Panel -->
-        <div class="col-lg-3">
+        <div class="col-lg-3" id="your-fighter">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Your Fighter</h3>
                 </div>
 
                 <div class="panel-body">
-                    <h3 id="fighter-name">Fighter goes here.</h3>
+                    <!-- <h3 id="fighter-name">Fighter goes here.</h3> -->
                     <div id="chosen-fighter"></div>
                 </div>
 
@@ -90,15 +96,16 @@
                 </div>
                 <div class="panel-body">
                     	<div class="col-lg-5">
-                			<h3>Your fighter here.</h3>
+                			<h3>You</h3>
+                            <div id="fighter-stance"></div>
                 			<p class="hp">HP=<span id="fighter-hp"></span></p>
                 		</div>
                 		<div class="col-lg-2">
                 			<h3>-vs-</h3>
-                			<button class="btn" id="attack">Attack!</button>
+                			<button class="btn btn-primary" id="attack">Attack!</button>
                 		</div>
                 		<div class="col-lg-5">
-                			<h3>Opponent goes here.</h3>
+                			<h3>Opponent</h3>
                 			<div id="opponent"></div>
                 			<p class="hp">HP=<span id="opponent-hp"></span></p>
                 		</div>
@@ -109,7 +116,7 @@
         <div class="col-lg-3" id="enemy-div">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Your Enemies</h3>
+                    <h1 class="panel-title">Your Enemies</h1>
                 </div>
 
                 <div class="panel-body">
